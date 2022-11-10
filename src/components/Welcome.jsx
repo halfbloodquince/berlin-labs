@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import Svg from "../svg-components/Svg"
 
 export default function Welcome() {
 
@@ -11,7 +12,7 @@ export default function Welcome() {
         hidden: {opacity:0},
         visible: {
             opacity:1, 
-            transition:{ staggerChildren:0.37, delayChildren:1.7}
+            transition:{ staggerChildren:0.87, delayChildren:2.2}
         },
     }
 
@@ -39,6 +40,8 @@ export default function Welcome() {
                     <h2>labs.</h2>
                 </div>
             </div>
+            <Svg />
+            
 
 
             <motion.div className="motion--text--wrapper" variants={container} initial="hidden" animate="visible">
