@@ -1,0 +1,129 @@
+body {
+  box-sizing: border-box;
+  margin: 0px;
+  font-family: 'Roboto', sans-serif;
+}
+
+p, h2 {
+  margin: 0px;
+}
+
+/* Welcome */
+
+.welcome {
+  position: relative;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+}
+
+.welcome--icon{
+  position:absolute;
+  left:2%;
+  top:2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  width: 150px;
+  height:80px;
+  padding:10px;
+}
+
+.icon--circle {
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  background-image: linear-gradient(45deg, #ff0000, #e84b1b, #e55f36, #f2321d, #fc0b0b);
+  background-size:200%;
+  background-position: left;
+
+}
+
+.icon--text--box{
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.icon--text--box >h2{
+  font-size: 1.3rem;
+}
+
+@keyframes circle-move {
+  from {background-position: 0%;}
+  to {background-position: 100%;}
+}
+
+
+
+.circle {
+  position: absolute;
+  width: 20vw;
+  height:20vw;
+  background-image: linear-gradient(45deg, #ff0000, #e84b1b, #e55f36, #f2321d, #fc0b0b);
+  background-size:300%;
+  animation: circle-move 7s infinite ease-in-out alternate;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.welcome--arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top:92%;
+  left:50%;
+  transform: translate(-50%, -50%);
+
+}
+
+@keyframes scroll {
+  0% {
+    width: 30px;
+    height:30px;
+    stroke:#faf9f8;
+  }
+  70% {
+    width: 30px;
+    height:30px;
+    stroke:#e89379;
+  }
+  90% {
+    width: 34px;
+    height:34px;
+    stroke:#ed0b0b;
+  }
+  100% {
+    width: 30px;
+    height:30px;
+    stroke:#ead2cb;
+  }
+}
+
+.svg--scroll {
+  width: 30px;
+  height: 30px;
+  animation: scroll  3s infinite ease-in-out;
+}
+
+.motion--text--wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+.motion--text {
+  padding: 15px;
+  font-size: 2rem;
+}
