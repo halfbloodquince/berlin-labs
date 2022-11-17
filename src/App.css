@@ -560,7 +560,7 @@ p, h2 {
   }
 
   .About {
-    height: 250vh;
+    height: 150vh;
   }
 
   .about--main--text{
@@ -604,3 +604,5 @@ p, h2 {
   }
   
 }
+
+/* to do Team and About Page flex boxes */
