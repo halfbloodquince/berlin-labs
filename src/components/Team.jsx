@@ -11,38 +11,79 @@ export default function Team() {
     const spinAnimation = useAnimation()
     const spinAnimationAnti = useAnimation()
 
+
+
     useEffect(() => {
+
         if (inView4) {
-            animateLeft.start({
-                x:"-101%",                
-                y:"-50%",
-                transition: {
-                    type:"spring", ease:'easeIn', duration:4, delay:0.7
-                }
-            })
-            animateRight.start({
-                x:"1%",                
-                y:"-50%",
-                transition: {
-                    type:"spring", ease:'easeIn', duration:4, delay:0.7
-                }
-            })
-            spinAnimation.start({
-                rotate:180,
-                x:"-50%",               
-                y:"-50%",
-                transition: {
-                    type:"spring", ease:'easeIn', duration:4, delay:0.7
-                }
-            })
-            spinAnimationAnti.start({
-                rotate:-180,
-                x:"-50%",               
-                y:"-50%",
-                transition: {
-                    type:"spring", ease:'easeIn', duration:4, delay:0.7
-                }
-            })
+            console.log(window.innerWidth)
+            if (window.innerWidth > 1000) {
+                console.log("more than")
+                animateLeft.start({
+                    x:"-101%",                
+                    y:"-50%",
+                    transition: {
+                        type:"spring", ease:'easeIn', duration:4, delay:0.7
+                    }
+                })
+                animateRight.start({
+                    x:"01%",                
+                    y:"-50%",
+                    transition: {
+                        type:"spring", ease:'easeIn', duration:4, delay:0.7
+                    }
+                })
+                spinAnimation.start({
+                    rotate:180,
+                    x:"-50%",               
+                    y:"-50%",
+                    transition: {
+                        type:"spring", ease:'easeIn', duration:4, delay:0.7
+                    }
+                })
+                spinAnimationAnti.start({
+                    rotate:-180,
+                    x:"-50%",               
+                    y:"-50%",
+                    transition: {
+                        type:"spring", ease:'easeIn', duration:4, delay:0.7
+                    }
+                })
+            }
+             else  {
+                console.log("less than")
+                                animateLeft.start({
+                    x:"-50%",                
+                    y:"-50%",
+                    transition: {
+                        type:"spring", ease:'easeIn', duration:4, delay:0.7
+                    }
+                })
+                animateRight.start({
+                    x:"-50%",                
+                    y:"-50%",
+                    transition: {
+                        type:"spring", ease:'easeIn', duration:4, delay:0.7
+                    }
+                })
+                spinAnimation.start({
+                    rotate:180,
+                    x:"-50%",               
+                    y:"-50%",
+                    transition: {
+                        type:"spring", ease:'easeIn', duration:4, delay:0.7
+                    }
+                })
+                spinAnimationAnti.start({
+                    rotate:-180,
+                    x:"-50%",               
+                    y:"-50%",
+                    transition: {
+                        type:"spring", ease:'easeIn', duration:4, delay:0.7
+                    }
+                })
+            }
+
         }
         if (!inView4) {
             animateLeft.start({

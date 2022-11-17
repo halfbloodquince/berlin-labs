@@ -505,7 +505,7 @@ p, h2 {
 
 @media (max-width:1000px) {
   .About {
-    height: 130vh;
+    height: 150vh;
   }
   .about--main--text {
     width: 80%;
@@ -520,7 +520,31 @@ p, h2 {
   .about--sections{
     margin-top: 30px;
   }
+
+  .Team {
+    height: 160vh;
+  }
+
+  .person--1--about {
+    position: absolute;
+    top:56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: #f2bca1;
+  
+  }
+  
+  .person--2--about{
+    position: absolute;
+    top:92%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: #f2bca1;
+  }
 }
+
 
 @media (max-width:600px) {
 
@@ -591,6 +615,8 @@ p, h2 {
     width: 55vw;
 
   }
+
+
 
 
 }
