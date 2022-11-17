@@ -8,18 +8,36 @@ export default function Team() {
     const {ref:ref4, inView:inView4} = useInView({threshold:0.5})
     const animateLeft = useAnimation()
     const animateRight = useAnimation()
+    const spinAnimation = useAnimation()
+    const spinAnimationAnti = useAnimation()
 
     useEffect(() => {
         if (inView4) {
             animateLeft.start({
-                x:"-100%",                
+                x:"-101%",                
                 y:"-50%",
                 transition: {
                     type:"spring", ease:'easeIn', duration:4, delay:0.7
                 }
             })
             animateRight.start({
-                x:"0%",                
+                x:"1%",                
+                y:"-50%",
+                transition: {
+                    type:"spring", ease:'easeIn', duration:4, delay:0.7
+                }
+            })
+            spinAnimation.start({
+                rotate:180,
+                x:"-50%",               
+                y:"-50%",
+                transition: {
+                    type:"spring", ease:'easeIn', duration:4, delay:0.7
+                }
+            })
+            spinAnimationAnti.start({
+                rotate:-180,
+                x:"-50%",               
                 y:"-50%",
                 transition: {
                     type:"spring", ease:'easeIn', duration:4, delay:0.7
@@ -35,6 +53,16 @@ export default function Team() {
                 x:"-50%",               
                 y:"-50%",
             })
+            spinAnimation.start({
+                rotate:0,
+                x:"-50%",               
+                y:"-50%",
+            })
+            spinAnimationAnti.start({
+                rotate:0,
+                x:"-50%",               
+                y:"-50%",
+            })
         }
     })
 
@@ -44,13 +72,13 @@ export default function Team() {
             <h1 className="team--title">About Us</h1>
             <div className="person--1">
                 <motion.div ref={ref4} className="person--1--slide" animate={animateLeft}>
-                    <div className="jack--circle"><CircleFirst /></div>
+                    <motion.div animate={spinAnimation} className="jack--circle"><CircleFirst  className="circle--icon--1" /></motion.div>
                     <h1>Jack</h1>
                 </motion.div>    
             </div>
             <div className="person--2">
                 <motion.div className="person--2--slide" animate={animateLeft}>
-                    <div className="matt--circle"><CircleSecond /></div>
+                    <motion.div animate={spinAnimationAnti} className="matt--circle"><CircleSecond /></motion.div>
                     <h1>Matt</h1>
                 </motion.div> 
             </div>

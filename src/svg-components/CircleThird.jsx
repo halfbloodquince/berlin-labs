@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer"
 import { useEffect } from "react"
 
 export default function CircleThird() {
-    const { ref:ref2, inView:inView2} = useInView({threshold:0.9})
+    const { ref:ref2, inView:inView2} = useInView({threshold:0.05})
     const animationLeftCircle = useAnimation()
     const animationRightCircle = useAnimation()
     const animationAbout = useAnimation()
@@ -12,7 +12,7 @@ export default function CircleThird() {
         if (inView2) {
             animationLeftCircle.start({
                 opacity:1,                
-                x:"0.3%",
+                x:"0.2%",
                 y:0,
                 transition: {
                     type:"spring", ease:'easeIn', duration:4, delay:0.7
@@ -22,7 +22,7 @@ export default function CircleThird() {
             animationRightCircle.start({
                 opacity:1,                
                 x:"-0.3%",
-                y:0,
+                y:"0.1%",
                 transition: {
                     type:"spring", ease:'easeIn', duration:4, delay:0.7
                 }
